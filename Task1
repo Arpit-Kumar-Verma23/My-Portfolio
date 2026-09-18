@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Personal Portfolio</h1>
+
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#education">Education</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#timetable">Timetable</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+
+            <figure>
+                <img src="profile.jpg" alt="My Profile Photo" width="200">
+                <figcaption>My Profile Photo</figcaption>
+            </figure>
+
+            <p>
+                Hello! My name is Arpit. I am a student interested in
+                web development and programming. I enjoy learning new
+                technologies and building useful projects.
+            </p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+
+            <article>
+                <h3>Bachelor's Degree</h3>
+                <p>Computer Science Engineering</p>
+                <p>Currently pursuing my degree.</p>
+            </article>
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Data Structures</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+        <section id="timetable">
+            <h2>Academic Timetable</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9:00 - 10:00</th>
+                        <th>10:00 - 11:00</th>
+                        <th>11:00 - 12:00</th>
+                        <th>12:00 - 1:00</th>
+                        <th>2:00 - 3:00</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Java</td>
+                        <td>Mathematics</td>
+                        <td>DBMS</td>
+                        <td>Break</td>
+                        <td>Web Development</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Data Structures</td>
+                        <td>Java</td>
+                        <td>Operating System</td>
+                        <td>Break</td>
+                        <td>Mathematics</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>DBMS</td>
+                        <td>Web Development</td>
+                        <td>Java</td>
+                        <td>Break</td>
+                        <td>Data Structures</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Operating System</td>
+                        <td>Mathematics</td>
+                        <td>Web Development</td>
+                        <td>Break</td>
+                        <td>Java</td>
+                    </tr>
+
+                    <tr>
+                        <td>Friday</td>
+                        <td>Data Structures</td>
+                        <td>DBMS</td>
+                        <td>Mathematics</td>
+                        <td>Break</td>
+                        <td>Operating System</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <address>
+                Email:
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                <br>
+                Phone: +91 9876543210
+            </address>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Personal Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
