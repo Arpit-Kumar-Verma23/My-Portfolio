@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>About Arpit</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    p {
+        color: rgb(60, 60, 60);
+        line-height: 1.6;
+    }
+    #header {
+        background-color: #2563eb;
+        padding: 25px;
+    }
+
+    #about {
+        background-color: #ffffff;
+        padding: 25px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+    }
+    .highlight {
+        color: #e63946;
+        font-weight: bold;
+    }
+
+    .section-title {
+        color: rgb(30, 80, 150);
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 5px;
+    }
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #ffff00;
+        text-decoration: underline;
+    }
+    ol.skills {
+        background-color: #e8f0fe;
+        padding: 20px 40px;
+        border-radius: 8px;
+    }
+
+    ol.skills li {
+        color: #333333;
+        padding: 8px;
+    }
+
+    ol.skills li:hover {
+        background-color: #cfe0ff;
+    }
+    ul.hobbies {
+        background-color: rgb(230, 245, 235);
+        padding: 20px 40px;
+        border-radius: 8px;
+    }
+
+    ul.hobbies li {
+        color: #176b3a;
+        padding: 8px;
+    }
+
+    ul.hobbies li::marker {
+        color: #e63946;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+<header id="header">
+
+    <h1>About Arpit</h1>
+
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#hobbies">Hobbies</a>
+    </nav>
+
+</header>
+<section id="about">
+
+    <h2 class="section-title">Who I Am</h2>
+
+    <p>
+        Hello! My name is <span class="highlight">Arpit</span>.
+        I am a B.Tech Computer Science student at GLA University, Mathura.
+    </p>
+
+    <p>
+        I am interested in technology, programming and web development.
+        My goal is to <span class="highlight">learn, create and improve</span>
+        my technical skills.
+    </p>
+
+
+    
+    <h2 class="section-title">My Education</h2>
+
+    <p>
+        I am currently pursuing my B.Tech in Computer Science and Engineering
+        from GLA University, Mathura.
+    </p>
+
+    <h2 id="skills" class="section-title">My Skills</h2>
+
+    <ol class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java</li>
+        <li>C Programming</li>
+        <li>Data Structures and Algorithms</li>
+    </ol>
+    <h2 id="hobbies" class="section-title">My Hobbies</h2>
+
+    <ul class="hobbies">
+        <li>Playing Cricket</li>
+        <li>Travelling</li>
+        <li>Learning New Technologies</li>
+        <li>Watching Movies</li>
+    </ul>
+
+    <h2 class="section-title">My Goal</h2>
+
+    <p>
+        My goal is to become a skilled software developer and build
+        useful and interesting projects using modern technologies.
+    </p>
+
+</section>
+
+
+
+<footer>
+
+    <p style="text-align: center;">
+        &copy; 2026 About Arpit
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
