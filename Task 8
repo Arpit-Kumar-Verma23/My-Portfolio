@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8 - Advanced DOM</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 3px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add {
+            background-color: green;
+            color: white;
+        }
+
+        .task {
+            list-style: none;
+            margin: 10px;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .up {
+            background-color: blue;
+            color: white;
+        }
+
+        .down {
+            background-color: orange;
+            color: white;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+        }
+
+        /* Chessboard */
+        #chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            width: 400px;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Advanced To-Do List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button class="add" onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+
+    <hr>
+
+    <h1>Dynamic Chessboard</h1>
+
+    <div id="chessboard"></div>
+
+</div>
+
+
+<script>
+
+    function addTask() {
+
+        let input = document.getElementById("taskInput");
+
+        if (input.value.trim() === "") {
+            alert("Enter a task");
+            return;
+        }
+
+        let li = document.createElement("li");
+        li.classList.add("task");
+
+        // Checkbox
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
+        checkbox.addEventListener("change", function () {
+            li.classList.toggle("completed");
+        });
+
+        // Task text
+        let text = document.createElement("span");
+        text.innerText = " " + input.value + " ";
+
+        // Up button
+        let upButton = document.createElement("button");
+        upButton.innerText = "↑";
+        upButton.classList.add("up");
+
+        upButton.onclick = function () {
+            let previous = li.previousElementSibling;
+
+            if (previous) {
+                li.parentNode.insertBefore(li, previous);
+            }
+        };
+
+     
+        let downButton = document.createElement("button");
+        downButton.innerText = "↓";
+        downButton.classList.add("down");
+
+        downButton.onclick = function () {
+            let next = li.nextElementSibling;
+
+            if (next) {
+                li.parentNode.insertBefore(next, li);
+            }
+        };
+
+     
+        let deleteButton = document.createElement("button");
+        deleteButton.innerText = "Delete";
+        deleteButton.classList.add("delete");
+
+        deleteButton.onclick = function () {
+            li.remove();
+        };
+
+        li.appendChild(checkbox);
+        li.appendChild(text);
+        li.appendChild(upButton);
+        li.appendChild(downButton);
+        li.appendChild(deleteButton);
+
+        document.getElementById("taskList").appendChild(li);
+
+        input.value = "";
+    }
+
+
+    let board = document.getElementById("chessboard");
+    for (let row = 0; row < 8; row++) {
+
+        for (let col = 0; col < 8; col++) {
+
+            let cell = document.createElement("div");
+
+            cell.classList.add("cell");
+            if ((row + col) % 2 === 0) {
+                cell.style.backgroundColor = "white";
+            } else {
+                cell.style.backgroundColor = "black";
+            }
+
+            board.appendChild(cell);
+        }
+    }
+
+</script>
+
+</body>
+</html>
